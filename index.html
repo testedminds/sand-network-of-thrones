@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+  <title>Network of Thrones</title>
+  <link href="vendor/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="vendor/bootstrap/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="img/cytoscape-logo.png" rel="shortcut icon" type="image/png" />
+</head>
+<body class="about-closed">
+  <div id="cy"></div>
+  <div id="loading">
+    <span class="fa fa-refresh fa-spin"></span>
+  </div>
+
+  <script src="vendor/fastclick.min.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/cytoscape/cytoscape.min.js"></script>
+  <script src="vendor/jquery/jquery.qtip.min.js"></script>
+  <link href="vendor/jquery/jquery.qtip.min.css" rel="stylesheet" type="text/css" />
+  <script src="vendor/cytoscape/cytoscape-qtip.js"></script>
+  <script src="vendor/bluebird.min.js"></script>
+  <script src="vendor/bootstrap/bootstrap.min.js"></script>
+  <script src="vendor/typeahead.bundle.js"></script>
+  <script src="vendor/handlebars.min.js"></script>
+  <script src="vendor/lodash.min.js"></script>
+
+  <script src="index.js"></script>
+  <script src="about.js"></script>
+
+  <div id="search-wrapper">
+    <input type="text" class="form-control" id="search" placeholder="&#xf002; Search">
+  </div>
+
+  <div id="info"></div>
+
+  <button id="reset" class="btn btn-default"><i class="fa fa-arrows-h"></i></button>
+
+  <button id="about" class="btn btn-default"><i class="fa fa-info"></i></button>
+
+  <div id="about-content" class="about-content">
+    <h3>Network of Thrones</h3>
+
+    <h4>This map is a POC of a browsable, searchable network visualization of the Weighted Edges of the Storm of Swords Network</h4>
+
+    <p>A. Beveridge and J. Shan, "Network of Thrones," Math Horizons Magazine , Vol. 23, No. 4 (2016), pp. 18-22.</p>
+
+    <p>Images courtesy of the Game of Thrones Wiki.</p>
+
+    <p>Leverages SAND, py2cytoscape, and igraph to implement the following features:</p>
+
+    <ul>
+      <li> An edge's thickness represents its weight.</li>
+      <li> The color of a vertex's border indicates its community.</li>
+      <li> The size of a vertex corresponds to its PageRank value.</li>
+      <li> The size of its label corresponds to its betweenness centrality.</li>
+      <li> Degree-sorted circle layout based on group membership, with saved and reloadable manual positions.</li>
+    </ul>
+
+    <h4>Where's the data?</h4>
+    <p><a target="_blank" href="https://www.macalester.edu/~abeverid/thrones.html">Data <i class="fa fa-external-link"></i></a></p>
+
+    <h4>How did you make this?</h4>
+    <p>This app was made using <a target="_blank" href="http://js.cytoscape.org">Cytoscape.js <i class="fa fa-external-link"></i></a>
+      based on their <a target="_blank" href="http://www.wineandcheesemap.com">Wine and Cheese Demo <i class="fa fa-external-link"></i></a>.</p>
+
+    <h4>Where is the code?</h4>
+    <p>The code is <a href="https://git.uptake.com/projects/TOOL/repos/dependencymap/browse">on Github <i class="fa fa-external-link"></i></a>.</p>
+    <p>Also see the <a href="https://github.com/testedminds/sand">SAND repo<i class="fa fa-external-link"></i></a>.</p>
+  </div>
+</body>
+</html>
