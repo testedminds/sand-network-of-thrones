@@ -13,6 +13,8 @@ $(function() {
   var infoTemplate = Handlebars.compile([
     '<p class="ac-name">{{name}}</p>',
     '{{#if indegree}}<p class="ac-node-type">Degree: {{indegree}}</p>{{/if}}',
+    '{{#if pagerank}}<p class="ac-node-type">PageRank: {{pagerank}}</p>{{/if}}',
+    '{{#if betweenness}}<p class="ac-node-type">Betweenness: {{betweenness}}</p>{{/if}}',
     '<p class="ac-more"><a target="_blank" href="{{wiki}}">Wiki <i class="fa fa-external-link"></i></a></p>'
   ].join(''));
 
