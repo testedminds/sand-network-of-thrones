@@ -41,34 +41,30 @@
   <button id="about" class="btn btn-default"><i class="fa fa-info"></i></button>
 
   <div id="about-content" class="about-content">
-    <h3>Network of Thrones</h3>
+    <h3>Interactive Network of Thrones</h3>
 
-    <h4>This map is a POC of a browsable, searchable network visualization of the Weighted Edges of the Storm of Swords Network</h4>
+    <p>This map is a zoomable, searchable network visualization of the <a target="_blank" href="https://www.macalester.edu/~abeverid/thrones.html">Storm of Swords Network <i class="fa fa-external-link"></i></a> published by Andrew Beveridge at Macalaster.</p>
 
     <p>A. Beveridge and J. Shan, "Network of Thrones," Math Horizons Magazine , Vol. 23, No. 4 (2016), pp. 18-22.</p>
 
-    <p>Images courtesy of the Game of Thrones Wiki.</p>
-
-    <p>Leverages SAND, py2cytoscape, and igraph to implement the following features:</p>
+    <p>The visualization leverages SAND, py2cytoscape, and python-igraph to implement the following features:</p>
 
     <ul>
-      <li> An edge's thickness represents its weight.</li>
-      <li> The color of a vertex's border indicates its community.</li>
-      <li> The size of a vertex corresponds to its PageRank value.</li>
-      <li> The size of its label corresponds to its betweenness centrality.</li>
-      <li> Degree-sorted circle layout based on group membership, with saved and reloadable manual positions.</li>
+      <li>An edge's thickness represents its weight.</li>
+      <li>The color of a vertex's border indicates its community.</li>
+      <li>The size of a vertex corresponds to its PageRank value.</li>
+      <li>The size of its label corresponds to its betweenness centrality.</li>
+      <li>The layout is a degree-sorted circle based on group membership, with saved and reloadable manual positioning.</li>
     </ul>
-
-    <h4>Where's the data?</h4>
-    <p><a target="_blank" href="https://www.macalester.edu/~abeverid/thrones.html">Data <i class="fa fa-external-link"></i></a></p>
 
     <h4>How did you make this?</h4>
     <p>This app was made using <a target="_blank" href="http://js.cytoscape.org">Cytoscape.js <i class="fa fa-external-link"></i></a>
       based on their <a target="_blank" href="http://www.wineandcheesemap.com">Wine and Cheese Demo <i class="fa fa-external-link"></i></a>.</p>
 
-    <h4>Where is the code?</h4>
-    <p>The code is <a href="https://git.uptake.com/projects/TOOL/repos/dependencymap/browse">on Github <i class="fa fa-external-link"></i></a>.</p>
-    <p>Also see the <a href="https://github.com/testedminds/sand">SAND repo<i class="fa fa-external-link"></i></a>.</p>
+    <p>The code is <a target="_blank" href="https://github.com/testedminds/sand-network-of-thrones/blob/master/Network%20of%20Thrones.ipynb">on Github <i class="fa fa-external-link"></i></a>.</p>
+    <p>Also see the <a target="_blank" href="https://github.com/testedminds/sand">SAND repo<i class="fa fa-external-link"></i></a> for examples of applying network analysis and visualization to system and software architecture.</p>
+
+    <p>Built by <a target="_blank" href="https://www.twitter.com/bobbynorton">Bobby Norton</a>.</p>
   </div>
 </body>
 </html>
