@@ -2,7 +2,7 @@ SHELL = /usr/bin/env bash
 
 # Customize name and img for your project:
 name = thrones
-img = hub.docker.com/$(name)
+img = testedminds/$(name)
 
 latest = $(img):latest
 number = `cat ./next-version.txt`
