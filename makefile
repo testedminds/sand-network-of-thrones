@@ -33,7 +33,7 @@ stop:
 open:
 	open http://192.168.99.100
 
-release: push tag update-version
+release: push tag heroku-push update-version
 
 push:
 	docker tag $(latest) $(img):$(version)
