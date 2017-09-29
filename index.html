@@ -44,33 +44,32 @@
     <h3>Network of Thrones</h3>
     <h4>SAND Edition</h4>
 
-    <p>This map is a zoomable, searchable network visualization of the <a target="_blank" href="https://www.macalester.edu/~abeverid/thrones.html">Storm of Swords Network <i class="fa fa-external-link"></i></a> published by Dr. Andrew Beveridge at Macalaster College.</p>
+    <p>This map is a zoomable, searchable network visualization of the <a target="_blank" href="https://www.macalester.edu/~abeverid/thrones.html">Storm of Swords Network</a>. The data was published by Dr. Andrew Beveridge at Macalaster College and this visualization was done by Bobby Norton.</p>
 
     <p>A. Beveridge and J. Shan, "Network of Thrones," Math Horizons Magazine , Vol. 23, No. 4 (2016), pp. 18-22.</p>
 
     <p>The visualization leverages SAND, py2cytoscape, and python-igraph to implement the following features:</p>
 
     <ul>
-      <li>An edge's thickness represents its weight.</li>
-      <li>The color of a vertex's border indicates its community.</li>
+      <li>An edge's thickness represents its weight, i.e. the number of interactions between the characters.</li>
       <li>The size of a vertex corresponds to its PageRank value.</li>
-      <li>The size of its label corresponds to its betweenness centrality.</li>
-      <li>The layout is a degree-sorted circle based on group membership, with saved and reloadable manual positioning.</li>
-      <li>The vertex's background is a local copy of the character's profile image on http://gameofthrones.wikia.com.</li>
+      <li>The color of a vertex's border indicates its community.</li>
+      <li>The size of a vertex's label corresponds to its betweenness centrality.</li>
+      <li>The background of a vertex is a local copy of the character's profile image on http://gameofthrones.wikia.com.</li>
+      <li>The layout is a degree-sorted circle based on community, with saved and reloadable manual positioning of communities.</li>
     </ul>
 
     <h4>How did you make this?</h4>
-    <p>The code is <a target="_blank" href="https://github.com/testedminds/sand-network-of-thrones/blob/master/Network%20of%20Thrones.ipynb">on Github <i class="fa fa-external-link"></i></a>.</p>
+    <p>You can find a Jupyter Notebook that will allow you to completely replicate this visualization <a target="_blank" href="https://github.com/testedminds/sand-network-of-thrones/blob/master/Network%20of%20Thrones.ipynb">on Github</a>.</p>
 
-    <p>This app was made using <a target="_blank" href="http://js.cytoscape.org">Cytoscape.js <i class="fa fa-external-link"></i></a>
-      based on their <a target="_blank" href="http://www.wineandcheesemap.com">Wine and Cheese Demo <i class="fa fa-external-link"></i></a>.</p>
+    <p>The app was made using <a target="_blank" href="http://js.cytoscape.org">Cytoscape.js</a>
+      based on their <a target="_blank" href="http://www.wineandcheesemap.com">Wine and Cheese Demo</a>.</p>
 
-    <p>Also see the <a target="_blank" href="https://github.com/testedminds/sand">SAND repo <i class="fa fa-external-link"></i></a> for examples of applying network analysis and visualization to systems architecture.</p>
-
-    <p>Built by <a target="_blank" href="https://www.twitter.com/bobbynorton">Bobby Norton</a>.</p>
+    <p>Also see the <a target="_blank" href="https://github.com/testedminds/sand">SAND repo</a> for examples of applying network analysis and visualization to systems architecture.</p>
 
     <h4>But...why?</h4>
-    <p>SAND is a network analytics toolkit and workflow written in Python. SAND focuses on the domain of network data in systems architecture, but the principles are useful for analysis of network data in other domains. The Network of Thrones dataset provides a basis to calibrate SAND against an existing network analysis. It acts as a case study and functional test for SAND, but is hopefully useful and entertaining in its own right.</p>
+    <p>SAND is a network analytics toolkit and workflow written in Python. SAND focuses on the domain of network data in systems architecture, but the principles are useful for network analysis in other domains such as this social network. The Network of Thrones dataset provided a basis to calibrate SAND against an existing well-described network analysis. Running this dataset through the SAND workflow started as a case study and functional test, but became useful and entertaining in its own right.</p>
+    <p>Love it? Hate it? <a target="_blank" href="https://www.twitter.com/bobbynorton">Let me know</a>.</p>
   </div>
 
 <script type="text/javascript">
