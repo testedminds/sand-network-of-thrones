@@ -1,0 +1,989 @@
+{
+  "format_version": "1.0",
+  "generated_by": "cytoscape-3.5.1",
+  "target_cytoscapejs_version": "~2.1",
+  "title": "GoT",
+  "style": [
+    {
+      "selector": "node",
+      "css": {
+        "text-valign": "bottom",
+        "text-halign": "right",
+        "background-color": "rgb(74,96,78)",
+        "width": 60.0,
+        "shape": "rectangle",
+        "font-size": 16,
+        "color": "rgb(204,204,204)",
+        "font-family": "SansSerif",
+        "font-weight": "normal",
+        "background-opacity": 1.0,
+        "height": 40.0,
+        "border-width": 4.0,
+        "border-color": "rgb(255,204,102)",
+        "border-opacity": 1.0,
+        "text-opacity": 1.0,
+        "content": "data(label)"
+      }
+    },
+    {
+      "selector": "node[pagerank > 0.05545694]",
+      "css": {
+        "height": 150.0
+      }
+    },
+    {
+      "selector": "node[pagerank = 0.05545694]",
+      "css": {
+        "height": 150.0
+      }
+    },
+    {
+      "selector": "node[pagerank > 0.00174126][pagerank < 0.05545694]",
+      "css": {
+        "height": "mapData(pagerank,0.00174126,0.05545694,35.0,150.0)"
+      }
+    },
+    {
+      "selector": "node[pagerank = 0.00174126]",
+      "css": {
+        "height": 35.0
+      }
+    },
+    {
+      "selector": "node[pagerank < 0.00174126]",
+      "css": {
+        "height": 35.0
+      }
+    },
+    {
+      "selector": "node[group = '0']",
+      "css": {
+        "border-color": "rgb(255,255,0)"
+      }
+    },
+    {
+      "selector": "node[group = '1']",
+      "css": {
+        "border-color": "rgb(235,27,89)"
+      }
+    },
+    {
+      "selector": "node[group = '2']",
+      "css": {
+        "border-color": "rgb(2,120,253)"
+      }
+    },
+    {
+      "selector": "node[group = '3']",
+      "css": {
+        "border-color": "rgb(0,255,43)"
+      }
+    },
+    {
+      "selector": "node[group = '4']",
+      "css": {
+        "border-color": "rgb(255,152,0)"
+      }
+    },
+    {
+      "selector": "node[group = '5']",
+      "css": {
+        "border-color": "rgb(194,86,252)"
+      }
+    },
+    {
+      "selector": "node[group = '6']",
+      "css": {
+        "border-color": "rgb(255,255,255)"
+      }
+    },
+    {
+      "selector": "node[pagerank > 0.05545694]",
+      "css": {
+        "width": 150.0
+      }
+    },
+    {
+      "selector": "node[pagerank = 0.05545694]",
+      "css": {
+        "width": 150.0
+      }
+    },
+    {
+      "selector": "node[pagerank > 0.00174126][pagerank < 0.05545694]",
+      "css": {
+        "width": "mapData(pagerank,0.00174126,0.05545694,35.0,150.0)"
+      }
+    },
+    {
+      "selector": "node[pagerank = 0.00174126]",
+      "css": {
+        "width": 35.0
+      }
+    },
+    {
+      "selector": "node[pagerank < 0.00174126]",
+      "css": {
+        "width": 35.0
+      }
+    },
+    {
+      "selector": "node[betweenness > 1,166.15]",
+      "css": {
+        "font-size": 52
+      }
+    },
+    {
+      "selector": "node[betweenness = 1,166.15]",
+      "css": {
+        "font-size": 52
+      }
+    },
+    {
+      "selector": "node[betweenness > 0][betweenness < 1,166.15]",
+      "css": {
+        "font-size": "mapData(betweenness,0,1,166.15,16,52)"
+      }
+    },
+    {
+      "selector": "node[betweenness = 0]",
+      "css": {
+        "font-size": 16
+      }
+    },
+    {
+      "selector": "node[betweenness < 0]",
+      "css": {
+        "font-size": 16
+      }
+    },
+    {
+      "selector": "node:selected",
+      "css": {
+        "background-color": "rgb(255,255,0)"
+      }
+    },
+    {
+      "selector": "edge",
+      "css": {
+        "target-arrow-shape": "none",
+        "line-style": "solid",
+        "line-color": "rgb(204,204,204)",
+        "font-family": "SansSerif",
+        "font-weight": "normal",
+        "opacity": 1.0,
+        "source-arrow-color": "rgb(0,0,0)",
+        "font-size": 10,
+        "color": "rgb(0,0,0)",
+        "text-opacity": 1.0,
+        "source-arrow-shape": "none",
+        "width": 2.5,
+        "content": "",
+        "target-arrow-color": "rgb(204,204,204)"
+      }
+    },
+    {
+      "selector": "edge[weight > 96]",
+      "css": {
+        "width": 10.0
+      }
+    },
+    {
+      "selector": "edge[weight = 96]",
+      "css": {
+        "width": 10.0
+      }
+    },
+    {
+      "selector": "edge[weight > 4][weight < 96]",
+      "css": {
+        "width": "mapData(weight,4,96,1.0,10.0)"
+      }
+    },
+    {
+      "selector": "edge[weight = 4]",
+      "css": {
+        "width": 1.0
+      }
+    },
+    {
+      "selector": "edge[weight < 4]",
+      "css": {
+        "width": 1.0
+      }
+    },
+    {
+      "selector": "edge:selected",
+      "css": {
+        "line-color": "rgb(255,0,0)"
+      }
+    },
+    {
+      "selector": "#6068",
+      "css": {
+        "background-image": "/img/Ygritte.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6067",
+      "css": {
+        "background-image": "/img/Worm.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6066",
+      "css": {
+        "background-image": "/img/Walton.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6065",
+      "css": {
+        "background-image": "/img/Walder.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6064",
+      "css": {
+        "background-image": "/img/Viserys.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6063",
+      "css": {
+        "background-image": "/img/Varys.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6062",
+      "css": {
+        "background-image": "/img/Val.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6061",
+      "css": {
+        "background-image": "/img/Tywin.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6060",
+      "css": {
+        "background-image": "/img/Tyrion.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6059",
+      "css": {
+        "background-image": "/img/Tommen.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6058",
+      "css": {
+        "background-image": "/img/Thoros.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6057",
+      "css": {
+        "background-image": "/img/Theon.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6056",
+      "css": {
+        "background-image": "/img/Styr.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6055",
+      "css": {
+        "background-image": "/img/Stannis.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6054",
+      "css": {
+        "background-image": "/img/Shireen.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6053",
+      "css": {
+        "background-image": "/img/Shae.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6052",
+      "css": {
+        "background-image": "/img/Sansa.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6051",
+      "css": {
+        "background-image": "/img/Sandor.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6050",
+      "css": {
+        "background-image": "/img/Samwell.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6049",
+      "css": {
+        "background-image": "/img/Salladhor.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6048",
+      "css": {
+        "background-image": "/img/Roslin.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6047",
+      "css": {
+        "background-image": "/img/Roose.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6046",
+      "css": {
+        "background-image": "/img/Robin.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6045",
+      "css": {
+        "background-image": "/img/Robert.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6044",
+      "css": {
+        "background-image": "/img/Robb.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6043",
+      "css": {
+        "background-image": "/img/Rickon.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6042",
+      "css": {
+        "background-image": "/img/Rickard.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6041",
+      "css": {
+        "background-image": "/img/Rhaegar.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6040",
+      "css": {
+        "background-image": "/img/Renly.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6039",
+      "css": {
+        "background-image": "/img/Rattleshirt.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6038",
+      "css": {
+        "background-image": "/img/Ramsay.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6037",
+      "css": {
+        "background-image": "/img/Rakharo.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6036",
+      "css": {
+        "background-image": "/img/Qyburn.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6035",
+      "css": {
+        "background-image": "/img/Qhorin.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6034",
+      "css": {
+        "background-image": "/img/Pycelle.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6033",
+      "css": {
+        "background-image": "/img/Podrick.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6032",
+      "css": {
+        "background-image": "/img/Petyr.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6031",
+      "css": {
+        "background-image": "/img/Orell.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6030",
+      "css": {
+        "background-image": "/img/Olenna.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6029",
+      "css": {
+        "background-image": "/img/Oberyn.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6028",
+      "css": {
+        "background-image": "/img/Nan.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6027",
+      "css": {
+        "background-image": "/img/Myrcella.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6026",
+      "css": {
+        "background-image": "/img/Missandei.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6025",
+      "css": {
+        "background-image": "/img/Meryn.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6024",
+      "css": {
+        "background-image": "/img/Melisandre.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6023",
+      "css": {
+        "background-image": "/img/Meera.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6022",
+      "css": {
+        "background-image": "/img/Marillion.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6021",
+      "css": {
+        "background-image": "/img/Margaery.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6020",
+      "css": {
+        "background-image": "/img/Mance.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6019",
+      "css": {
+        "background-image": "/img/Mace.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6018",
+      "css": {
+        "background-image": "/img/Lysa.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6017",
+      "css": {
+        "background-image": "/img/Luwin.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6016",
+      "css": {
+        "background-image": "/img/Lothar.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6015",
+      "css": {
+        "background-image": "/img/Loras.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6014",
+      "css": {
+        "background-image": "/img/Lancel.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6013",
+      "css": {
+        "background-image": "/img/Kraznys.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6012",
+      "css": {
+        "background-image": "/img/Kevan.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6011",
+      "css": {
+        "background-image": "/img/Karl.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6010",
+      "css": {
+        "background-image": "/img/Jorah.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6009",
+      "css": {
+        "background-image": "/img/Jon.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6008",
+      "css": {
+        "background-image": "/img/Jon Arryn.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6007",
+      "css": {
+        "background-image": "/img/Jojen.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6006",
+      "css": {
+        "background-image": "/img/Joffrey.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6005",
+      "css": {
+        "background-image": "/img/Jeyne.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6004",
+      "css": {
+        "background-image": "/img/Janos.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6003",
+      "css": {
+        "background-image": "/img/Jaime.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6002",
+      "css": {
+        "background-image": "/img/Irri.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6001",
+      "css": {
+        "background-image": "/img/Ilyn.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#6000",
+      "css": {
+        "background-image": "/img/Illyrio.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5999",
+      "css": {
+        "background-image": "/img/Hoster.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5998",
+      "css": {
+        "background-image": "/img/Hodor.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5997",
+      "css": {
+        "background-image": "/img/Grenn.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5996",
+      "css": {
+        "background-image": "/img/Gregor.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5995",
+      "css": {
+        "background-image": "/img/Gilly.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5994",
+      "css": {
+        "background-image": "/img/Gendry.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5993",
+      "css": {
+        "background-image": "/img/Ellaria.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5992",
+      "css": {
+        "background-image": "/img/Elia.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5991",
+      "css": {
+        "background-image": "/img/Edmure.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5990",
+      "css": {
+        "background-image": "/img/Eddison.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5989",
+      "css": {
+        "background-image": "/img/Eddard.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5988",
+      "css": {
+        "background-image": "/img/Drogo.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5987",
+      "css": {
+        "background-image": "/img/Doran.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5986",
+      "css": {
+        "background-image": "/img/Davos.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5985",
+      "css": {
+        "background-image": "/img/Dalla.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5984",
+      "css": {
+        "background-image": "/img/Daenerys.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5983",
+      "css": {
+        "background-image": "/img/Daario.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5982",
+      "css": {
+        "background-image": "/img/Cressen.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5981",
+      "css": {
+        "background-image": "/img/Craster.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5980",
+      "css": {
+        "background-image": "/img/Chataya.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5979",
+      "css": {
+        "background-image": "/img/Cersei.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5978",
+      "css": {
+        "background-image": "/img/Catelyn.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5977",
+      "css": {
+        "background-image": "/img/Brynden.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5976",
+      "css": {
+        "background-image": "/img/Bronn.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5975",
+      "css": {
+        "background-image": "/img/Brienne.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5974",
+      "css": {
+        "background-image": "/img/Bran.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5973",
+      "css": {
+        "background-image": "/img/Bowen.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5972",
+      "css": {
+        "background-image": "/img/Beric.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5971",
+      "css": {
+        "background-image": "/img/Belwas.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5970",
+      "css": {
+        "background-image": "/img/Barristan.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5969",
+      "css": {
+        "background-image": "/img/Balon.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5968",
+      "css": {
+        "background-image": "/img/Arya.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5967",
+      "css": {
+        "background-image": "/img/Anguy.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5966",
+      "css": {
+        "background-image": "/img/Amory.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5965",
+      "css": {
+        "background-image": "/img/Alliser.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5964",
+      "css": {
+        "background-image": "/img/Aerys.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5963",
+      "css": {
+        "background-image": "/img/Aemon.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "selector": "#5962",
+      "css": {
+        "background-image": "/img/Aegon.jpg",
+        "background-fit": "contain"
+      }
+    },
+    {
+      "css": {
+        "font-size": 32
+      },
+      "selector": "node[betweenness > 1166.15]"
+    },
+    {
+      "css": {
+        "font-size": 32
+      },
+      "selector": "node[betweenness = 1166.15]"
+    },
+    {
+      "css": {
+        "font-size": "mapData(betweenness,0,1166.15,16,52)"
+      },
+      "selector": "node[betweenness > 0][betweenness < 1166.15]"
+    }
+  ]
+}
